@@ -76,6 +76,10 @@ class Program {
           }
         }
 
+        if(snek[0].x < 0 || snek[0].x > 80 || snek[0].y < 0 || snek[0].y > 80){
+          snek.Clear();
+        }
+
         score = snek.Count - 3;
 
         if(score > maxscore)
