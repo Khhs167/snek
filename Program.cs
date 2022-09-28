@@ -52,6 +52,11 @@ class Program {
 
       if(movetimer > 1.0f / speed && snek.Count > 0){
 
+        score = snek.Count - 3;
+
+        if(score > maxscore)
+          maxscore = score;
+
         if(inputs.Count > 0){
           direction = inputs.Dequeue();
         }
@@ -79,11 +84,6 @@ class Program {
         if(snek[0].x < 0 || snek[0].x > 80 || snek[0].y < 0 || snek[0].y > 80){
           snek.Clear();
         }
-
-        score = snek.Count - 3;
-
-        if(score > maxscore)
-          maxscore = score;
         
       }
 
